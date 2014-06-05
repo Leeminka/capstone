@@ -1,0 +1,15 @@
+kr.ac.kookmin.kmuapp.subs.page.etc.KMapViewActivity
+kr.ac.kookmin.kmuapp.subs.page.KInfoActivity
+kr.ac.kookmin.kmuapp.subs.page.KSocialActivity
+KMUMenuActivity
+kr.ac.kookmin.kmuapp.subs.page.KGraduateActivity
+kr.ac.kookmin.kmuapp.subs.page.KNoticeActivity
+kr.ac.kookmin.kmuapp.subs.page.KNewsActivity
+kr.ac.kookmin.kmuapp.subs.page.KScheduleActivity
+kr.ac.kookmin.kmuapp.subs.page.KCampusActivity
+kr.ac.kookmin.kmuapp.subs.page.KCollegeActivity
+kr.ac.kookmin.kmuapp.subs.page.KIconAddActivity
+kr.ac.kookmin.kmuapp.subs.page.KIntroActivity
+kr.ac.kookmin.kmuapp.KMUMainActivity
+kr.ac.kookmin.kmuapp.subs.page.etc.KVideoViewActivity
+kr.ac.kookmin.kmuapp.subs.page.KIconSettingActivity

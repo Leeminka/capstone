@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<analysis api-level="7" file-size="1393686" md5="1d7d433f5f00919f9a64aadd69d4a0f2" name="0de56b989a72b92c9f6a783d4957e7d5592f8d58" report-version="0.5" sha1="0de56b989a72b92c9f6a783d4957e7d5592f8d58">
+	<report_version>
+		<major>0</major>
+		<minor>5</minor>
+	</report_version>
+	<dynamic-analysis>
+		<file-operations>
+			<file-read seconds="109.338687897">
+				<path>/data/data/com.android.mms/shared_prefs/_has_set_default_values.xml|</path>
+				<data>&lt;?xml version='1.0' encoding='utf-8' standalone='yes' ?&gt;
+&lt;map&gt;
+&lt;boolean name="_has_set_default_values" value="true" /&gt;
+&lt;/map&gt;
+</data>
+			</file-read>
+			<file-read seconds="110.337054968">
+				<path>/data/data/com.android.mms/shared_prefs/com.android.mms_preferences.xml|</path>
+				<data>&lt;?xml version='1.0' encoding='utf-8' standalone='yes' ?&gt;
+&lt;map&gt;
+&lt;string name="pref_key_ringtone"&gt;content://settings/system/notification_sound&lt;/string&gt;
+&lt;boolean name="pref_key_auto_delete" value="true" /&gt;
+&lt;boolean name="checked_message_limits" value="true" /&gt;
+&lt;boolean name="pref_key_mms_auto_retrieval" value="true" /&gt;
+&lt;string name="pref_key_vibrateWhen"&gt;never&lt;/string&gt;
+&lt;boolean name="pref_key_enable_notifications" value="true" /&gt;
+&lt;/map&gt;
+</data>
+			</file-read>
+		</file-operations>
+		<started-services>
+			<service seconds="48.34263587">com.android.vending.util.WorkService</service>
+			<service seconds="50.3388159275">com.android.vending.util.WorkService</service>
+			<service seconds="111.337965012">com.android.mms.transaction.SmsReceiverService</service>
+			<service seconds="111.338063002">com.android.mms.transaction.SmsReceiverService</service>
+		</started-services>
+	</dynamic-analysis>
+	<static-analysis>
+		<activities>
+			<activity name="kr.ac.kookmin.kmuapp.subs.page.etc.KMapViewActivity"/>
+			<activity name="kr.ac.kookmin.kmuapp.subs.page.KInfoActivity"/>
+			<activity name="kr.ac.kookmin.kmuapp.subs.page.KSocialActivity"/>
+			<activity name="KMUMenuActivity"/>
+			<activity name="kr.ac.kookmin.kmuapp.subs.page.KGraduateActivity"/>
+			<activity name="kr.ac.kookmin.kmuapp.subs.page.KNoticeActivity"/>
+			<activity name="kr.ac.kookmin.kmuapp.subs.page.KNewsActivity"/>
+			<activity name="kr.ac.kookmin.kmuapp.subs.page.KScheduleActivity"/>
+			<activity name="kr.ac.kookmin.kmuapp.subs.page.KCampusActivity"/>
+			<activity name="kr.ac.kookmin.kmuapp.subs.page.KCollegeActivity"/>
+			<activity name="kr.ac.kookmin.kmuapp.subs.page.KIconAddActivity"/>
+			<activity name="kr.ac.kookmin.kmuapp.subs.page.KIntroActivity"/>
+			<activity name="kr.ac.kookmin.kmuapp.KMUMainActivity">
+				<intent-filter action="android.intent.action.MAIN" category="android.intent.category.LAUNCHER"/>
+			</activity>
+			<activity name="kr.ac.kookmin.kmuapp.subs.page.etc.KVideoViewActivity"/>
+			<activity name="kr.ac.kookmin.kmuapp.subs.page.KIconSettingActivity"/>
+		</activities>
+		<services/>
+		<broadcast-receivers/>
+		<providers/>
+		<used-libraries/>
+		<required-permissions>
+			<required-permission name="android.permission.INTERNET"/>
+		</required-permissions>
+		<used-permissions>
+			<used-permission name="android.permission.INTERNET">
+				<call>
+					<m1>Lkr/ac/kookmin/kmuapp/KMUMenuActivity/showPopupWindow(Ljava/lang/String; Ljava/lang/String; Ljava/lang/String; Ljava/lang/String; Ljava/lang/String;)V</m1>
+					<m2>Ljava/net/URL/openConnection()Ljava/net/URLConnection;</m2>
+				</call>
+				<call>
+					<m1>Lkr/ac/kookmin/kmuapp/utils/HttpUtil/&lt;init&gt;(Landroid/content/Context;)V</m1>
+					<m2>Lorg/apache/http/impl/client/DefaultHttpClient/&lt;init&gt;()V</m2>
+				</call>
+				<call>
+					<m1>Lkr/ac/kookmin/kmuapp/utils/HttpUtil/requestGet(Ljava/lang/String; Ljava/util/List;)Ljava/lang/String;</m1>
+					<m2>Lorg/apache/http/impl/client/DefaultHttpClient/execute(Lorg/apache/http/client/methods/HttpUriRequest; Lorg/apache/http/protocol/HttpContext;)Lorg/apache/http/HttpResponse;</m2>
+				</call>
+				<call>
+					<m1>Lkr/ac/kookmin/kmuapp/utils/HttpUtil/requestPost(Ljava/lang/String; Ljava/util/List;)Ljava/lang/String;</m1>
+					<m2>Lorg/apache/http/impl/client/DefaultHttpClient/execute(Lorg/apache/http/client/methods/HttpUriRequest; Lorg/apache/http/protocol/HttpContext;)Lorg/apache/http/HttpResponse;</m2>
+				</call>
+				<call>
+					<m1>Lkr/ac/kookmin/kmuapp/subs/KAbstractSubActivity/setMenuPage(I)V</m1>
+					<m2>Landroid/webkit/WebView/&lt;init&gt;(Landroid/content/Context;)V</m2>
+				</call>
+				<call>
+					<m1>Lkr/ac/kookmin/kmuapp/KMUMenuActivity/showPopupWindow(Ljava/lang/String; Ljava/lang/String; Ljava/lang/String; Ljava/lang/String; Ljava/lang/String;)V</m1>
+					<m2>Ljava/net/HttpURLConnection/connect()V</m2>
+				</call>
+			</used-permission>
+		</used-permissions>
+		<features>
+			<feature required="true">android.hardware.touchscreen</feature>
+			<feature required="true">android.hardware.screen.portrait</feature>
+		</features>
+		<urls>
+			<url>http://m.kookmin.ac.kr/notice/forum.php</url>
+			<url>http://m.kookmin.ac.kr/college/arts.php</url>
+			<url>http://m.ku.ac.kr/</url>
+			<url>http://m.kookmin.ac.kr/info/parttime.php</url>
+			<url>http://m.kookmin.ac.kr/college/bitfamily.php</url>
+			<url>http://m.kookmin.ac.kr/resource/enrollment.php</url>
+			<url>http://m.ku.ac.kr/Graduate/GraduateView.php?f=8-14&amp;skin=no</url>
+			<url>http://m.kookmin.ac.kr/college/sport.php</url>
+			<url>http://m.ku.ac.kr/Graduate/GraduateView.php?f=8-03&amp;skin=no</url>
+			<url>http://www.kookmin.ac.kr/ajax/data.php</url>
+			<url>http://m.kookmin.ac.kr/resource/major.php</url>
+			<url>http://m.ku.ac.kr/Graduate/GraduateView.php?f=8-09&amp;skin=no</url>
+			<url>http://m.kookmin.ac.kr/campus/traffic.php</url>
+			<url>http://m.kookmin.ac.kr/college/edu.php</url>
+			<url>http://m.ku.ac.kr/Graduate/GraduateView.php?f=8-13&amp;skin=no</url>
+			<url>http://twitter.com/KMU_tweet</url>
+			<url>http://m.kookmin.ac.kr/intro/concept.php</url>
+			<url>http://m.ku.ac.kr/Graduate/GraduateView.php?f=8-11&amp;skin=no</url>
+			<url>http://m.ku.ac.kr/Graduate/GraduateView.php?f=8-12&amp;skin=no</url>
+			<url>http://m.kookmin.ac.kr/college/biz.php</url>
+			<url>http://m.ku.ac.kr/Graduate/GraduateView.php?f=8-10&amp;skin=no</url>
+			<url>http://m.kookmin.ac.kr/intro/global.php</url>
+			<url>http://m.kookmin.ac.kr/intro/links.php</url>
+			<url>http://m.kookmin.ac.kr/resource/admission.php</url>
+			<url>http://m.kookmin.ac.kr/info/cafeteria.php</url>
+			<url>http://m.kookmin.ac.kr/college/gba.php</url>
+			<url>http://m.kookmin.ac.kr/college/kis.php</url>
+			<url>http://cafe.daum.net/kmu1010</url>
+			<url>http://m.kookmin.ac.kr/news/media.php</url>
+			<url>http://m.kookmin.ac.kr/news/library.php</url>
+			<url>http://m.ku.ac.kr/college/engineering.php</url>
+			<url>http://m.kookmin.ac.kr/college/forest.php</url>
+			<url>http://m.kookmin.ac.kr/campus/bus.php</url>
+			<url>http://m.kookmin.ac.kr/college/social.php</url>
+			<url>http://m.kookmin.ac.kr/college/totalart.php</url>
+			<url>http://m.kookmin.ac.kr/info/its.php</url>
+			<url>http://m.kookmin.ac.kr/notice/scolarship.php</url>
+			<url>http://m.kookmin.ac.kr/info/library.php</url>
+			<url>http://m.kookmin.ac.kr/info/board.php</url>
+			<url>http://m.kookmin.ac.kr/college/gsd.php</url>
+			<url>http://m.kookmin.ac.kr/college/administration.php</url>
+			<url>http://m.kookmin.ac.kr/college/sports.php</url>
+			<url>http://m.ku.ac.kr/Graduate/GraduateView.php?f=8-07&amp;skin=no</url>
+			<url>http://m.kookmin.ac.kr/college/ifl.php</url>
+			<url>http://m.kookmin.ac.kr/college/gds.php</url>
+			<url>http://m.kookmin.ac.kr/college/kyungsang.php</url>
+			<url>http://m.ku.ac.kr/Graduate/GraduateView.php?f=8-08&amp;skin=no</url>
+			<url>http://m.kookmin.ac.kr/info/market.php</url>
+			<url>http://m.kookmin.ac.kr/info/bukak.php</url>
+			<url>http://m.kookmin.ac.kr/notice/event.php</url>
+			<url>http://m.ku.ac.kr/college/design.php</url>
+			<url>http://m.kookmin.ac.kr/college/science.php</url>
+			<url>http://m.kookmin.ac.kr/notice/entrance.php</url>
+			<url>http://m.ku.ac.kr/Graduate/GraduateView.php?f=8-04&amp;skin=no</url>
+			<url>http://m.kookmin.ac.kr/resource/schedule.php</url>
+			<url>http://m.kookmin.ac.kr/college/gse.php</url>
+			<url>http://m.ku.ac.kr/Graduate/GraduateView.php?f=8-02&amp;skin=no</url>
+			<url>http://m.ku.ac.kr/Graduate/GraduateView.php?f=8-01&amp;skin=no</url>
+			<url>http://m.kookmin.ac.kr/college/ted.php</url>
+			<url>http://m.kookmin.ac.kr/info/convinience.php</url>
+			<url>http://m.kookmin.ac.kr/main.php?skin=no</url>
+			<url>http://m.kookmin.ac.kr/news/special.php</url>
+			<url>http://m.kookmin.ac.kr/college/eecs.php</url>
+			<url>http://m.kookmin.ac.kr/campus/contact.php</url>
+			<url>http://m.kookmin.ac.kr/intro/movie.php</url>
+			<url>http://m.kookmin.ac.kr/college/archi.php</url>
+			<url>http://m.kookmin.ac.kr/notice/special.php</url>
+			<url>http://blog.naver.com/kmu_univ</url>
+			<url>http://m.kookmin.ac.kr/college/culture.php</url>
+			<url>http://blog.naver.com/kmu_unik</url>
+			<url>http://m.kookmin.ac.kr/resource/scholarship.php</url>
+			<url>http://m.kookmin.ac.kr/news/kookmin.php</url>
+			<url>http://m.kookmin.ac.kr/college/law.php</url>
+			<url>http://m.kookmin.ac.kr//intro/philosophy.php</url>
+			<url>http://m.kookmin.ac.kr/news/ucc.php</url>
+			<url>http://m.kookmin.ac.kr/intro/greeting.php</url>
+			<url>http://m.ku.ac.kr/Graduate/GraduateView.php?f=8-06&amp;skin=no</url>
+			<url>http://m.kookmin.ac.kr/intro/orgnization.php</url>
+			<url>http://m.kookmin.ac.kr/college/humanities.php</url>
+			<url>http://m.kookmin.ac.kr/notice/administration.php</url>
+			<url>http://m.kookmin.ac.kr/resource/international.php</url>
+			<url>http://m.kookmin.ac.kr/intro/movie.mp4</url>
+			<url>http://m.kookmin.ac.kr/college/politics.php</url>
+			<url>http://m.kookmin.ac.kr/college/gsaek.php</url>
+			<url>http://m.kookmin.ac.kr/college/bakaktime.php</url>
+			<url>http://m.kookmin.ac.kr/resource/grauate.php</url>
+			<url>http://m.kookmin.ac.kr/college/teaching.php</url>
+			<url>http://www.youtube.com/KMU1010</url>
+			<url>http://m.ku.ac.kr/Graduate/GraduateView.php?f=8-05&amp;skin=no</url>
+			<url>http://m.kookmin.ac.kr/notice/general.php</url>
+			<url>http://m.kookmin.ac.kr/news/plus.php</url>
+			<url>http://m.kookmin.ac.kr/campus/photos.php</url>
+		</urls>
+		<general-apk-info>
+			<application-name>kr.ac.kookmin.kmuapp</application-name>
+			<valid_manifest>True</valid_manifest>
+			<valid_zipfile>True</valid_zipfile>
+			<valid_androguard_zipfile>True</valid_androguard_zipfile>
+			<uses-native-code>False</uses-native-code>
+			<uses-dynamic-code>False</uses-dynamic-code>
+			<uses-reflection>False</uses-reflection>
+			<uses-crypto>False</uses-crypto>
+		</general-apk-info>
+		<certificate>
+			<owner>CN=Young Moon Cho, OU=PR dept., O=KOOKMIN Univ., L=Seoul, C=ko</owner>
+			<issuer>CN=Young Moon Cho, OU=PR dept., O=KOOKMIN Univ., L=Seoul, C=ko</issuer>
+			<serial-number>4cc65316</serial-number>
+			<validity from="Tue Oct 26 04:03:34 GMT 2010" until="Wed Oct 13 04:03:34 GMT 2060"/>
+			<fingerprints md5="B3:8F:76:CD:21:09:38:F8:AC:45:32:A3:A0:CA:14:EC" sha1="91:02:EC:C0:B7:E8:B1:61:5F:B2:F1:E7:3C:0E:F3:FC:51:D4:99:01"/>
+		</certificate>
+		<manifest-meta-data/>
+		<embedded-files/>
+		<java-packages>
+			<package name="kr.ac.kookmin.kmuapp"/>
+			<package name="kr.ac.kookmin.kmuapp.database"/>
+			<package name="kr.ac.kookmin.kmuapp.entity"/>
+			<package name="kr.ac.kookmin.kmuapp.subs"/>
+			<package name="kr.ac.kookmin.kmuapp.subs.page"/>
+			<package name="kr.ac.kookmin.kmuapp.subs.page.etc"/>
+			<package name="kr.ac.kookmin.kmuapp.subs.view"/>
+			<package name="kr.ac.kookmin.kmuapp.utils"/>
+		</java-packages>
+	</static-analysis>
+	<rating model_version="2013-01-08" nr_of_features="17/18" score="0.00931521"/>
+	<rating model_version="2013-02-01" nr_of_features="18/19" score="0.0331299"/>
+	<rating model_version="2013-06-01" nr_of_features="18/19" score="0.0552306"/>
+	<rating model_version="2013-08-01" nr_of_features="18/19" score="0.0968371"/>
+	<rating model_version="2013-09-10" nr_of_features="18/19" score="0.0743758"/>
+</analysis>

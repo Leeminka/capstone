@@ -1,0 +1,4 @@
+com.android.vending.util.WorkService
+com.android.vending.util.WorkService
+com.android.mms.transaction.SmsReceiverService
+com.android.mms.transaction.SmsReceiverService
